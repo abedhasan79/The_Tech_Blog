@@ -16,7 +16,7 @@ const app = express();
 
 //session
 const sess = {
-    secret: process.env.SESSION_SECRET,
+    secret: 'Super secret secret',
     cookie: {
         //session will expire in one hour idel time
         maxAge: 60 * 60 * 1000,
