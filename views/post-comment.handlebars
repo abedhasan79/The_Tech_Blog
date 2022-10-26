@@ -5,7 +5,7 @@
             {{posts.title}}
         </h2>
         <input type="hidden" value="{{users.id}}" id="user-id-hidden-comment">
-        <p>Created by {{users.name}} on {{format_date posts.date_created}}</p>
+        <p>Created by {{posts.user.name}} on {{format_date posts.date_created}}</p>
     </div>
     <div class="col-md-7">
         <p>

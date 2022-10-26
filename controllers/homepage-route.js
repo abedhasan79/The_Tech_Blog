@@ -32,7 +32,7 @@ router.get('/post/:id', async (req, res) => {
     const postData = await Post.findOne({
       where: {id: req.params.id},
       include: [
-        User,
+        {model: User, attributes:['name']},
         {
           model: Comment,
           include: [User]
