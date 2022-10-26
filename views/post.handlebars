@@ -1,9 +1,11 @@
-<!-- Loop over each object in the posts array -->
 {{#each posts as |post| }}
 <div class="row mb-4 project">
     <div class="col-md-5">
         <h2>
-            {{post.title}}
+            <a href="/dashboard/editPost/{{post.id}}">
+                {{post.title}}
+            </a>
+            
         </h2>
         
         <p>Created by {{user.name}} on {{format_date post.date_created}}</p>

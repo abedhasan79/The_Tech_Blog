@@ -38,10 +38,10 @@ router.get('/post/:id', async (req, res) => {
       ],
     });
 
-    const post = postData.get({ plain: true });
+    const posts = postData.get({ plain: true });
 
     res.render('post', {
-      ...post,
+      ...posts,
       loggedIn: req.session.loggedIn
     });
   } catch (err) {
