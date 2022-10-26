@@ -1,0 +1,37 @@
+<div class="row mb-4 post">
+    <div class="col-md-5">
+        <h2>
+            <input type="hidden" value="{{posts.id}}" id="post-id-hidden-comment">
+            {{posts.title}}
+        </h2>
+        <input type="hidden" value="{{users.id}}" id="user-id-hidden-comment">
+        <p>Created by {{users.name}} on {{format_date posts.date_created}}</p>
+    </div>
+    <div class="col-md-7">
+        <p>
+            {{posts.description}}
+        </p>
+    </div>
+</div>
+
+<div>
+    <h2>Comments:</h2>
+</div>
+
+<p>
+    {{> comment posts.comments}}
+</p>
+
+
+<div>
+    {{#if loggedIn}}
+    <form id="comment-form">
+        <label class="form-label">Comment:</label>
+        <textarea class="form-textarea form-input" id="add-comment"></textarea>
+        <button class="btn btn-primary" type="submit">comment</button>
+    </form>
+    {{else}}
+    <a href="/login">Login to comment</a>
+    {{/if}}
+</div>
+<script src="/js/comment.js"></script>
