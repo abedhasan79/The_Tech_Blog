@@ -1,0 +1,56 @@
+header{
+    font-size: 3vh;
+}
+
+.jumbotron{
+    background-color: rgb(162, 113, 207);
+    color: white;
+    margin-bottom: 15vh;
+}
+
+.jumbotron a{
+    color: white;
+}
+
+body{
+    background-color: bisque;
+}
+
+.post-title{
+    text-align: center;
+    background-color: aqua;
+}
+.post-description{
+    text-align: center;
+    background-color: rgb(163, 120, 85);
+}
+.post-content{
+    background-color: rgb(163, 120, 85);
+    width: 50%;
+    margin-bottom: 3vh;
+}
+
+#edit-form{
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.delete-btn{
+    text-align: center;
+}
+
+.comment-content{
+    text-align: center;
+    width: 50%;
+    background-color: brown;
+    color: antiquewhite;
+}
+
+#new-post{
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+#create-post{
+    text-align: center;
+    font-size: 3vh;
+}

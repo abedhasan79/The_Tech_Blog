@@ -1,7 +1,7 @@
 <!-- Loop over each object in the posts array -->
 {{#each posts as |post| }}
-<div class="row mb-4 project">
-    <div class="col-md-5">
+<div class="justify-content-center post-content">
+    <div class="post-title">
         <h2>
             <a href="/post/{{post.id}}">
                 {{post.title}}
@@ -10,7 +10,7 @@
         
         <p>Created by {{user.name}} on {{format_date post.date_created}}</p>
     </div>
-    <div class="col-md-7">
+    <div class="post-description">
         <p>
             {{post.description}}
         </p>

@@ -1,5 +1,5 @@
-<div class="row mb-4 post">
-    <div class="col-md-5">
+<div class="justify-content-center post-content">
+    <div class="post-title">
         <h2>
             <input type="hidden" value="{{posts.id}}" id="post-id-hidden-comment">
             {{posts.title}}
@@ -7,27 +7,32 @@
         <input type="hidden" value="{{users.id}}" id="user-id-hidden-comment">
         <p>Created by {{posts.user.name}} on {{format_date posts.date_created}}</p>
     </div>
-    <div class="col-md-7">
+    <div class="post-description">
         <p>
             {{posts.description}}
         </p>
     </div>
 </div>
 
-<div>
-    <h2>Comments:</h2>
+<div class="comment-content">
+    <div>
+        <h2>Comments:</h2>
+    </div>
+
+    <p>
+        {{> comment posts.comments}}
+    </p>
 </div>
 
-<p>
-    {{> comment posts.comments}}
-</p>
 
 
-<div>
+<div class="comment-content">
     {{#if loggedIn}}
     <form id="comment-form">
         <label class="form-label">Comment:</label>
+        <br>
         <textarea class="form-textarea form-input" id="add-comment"></textarea>
+        <br>
         <button class="btn btn-primary" type="submit">comment</button>
     </form>
     {{else}}
