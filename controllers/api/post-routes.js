@@ -2,8 +2,28 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+
+router.get('/', async (req, res) => {
+    try {
+        // Get all posts and JOIN with user data
+        const PostData = await Post.findAll({
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
+        });
+
+        // Pass serialized data and session flag into template
+        res.status(200).json(PostData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 //create a post
-router.post('/', withAuth, async (req, res) => {
+router.post('/',  async (req, res) => {
     try {
         const newPost = await Post.create({
             ...req.body,
@@ -20,7 +40,7 @@ router.post('/', withAuth, async (req, res) => {
 //update  a post
 router.put('/:id', async (req, res) => {
     try {
-        const postData = await Post.update(req.body,{
+        const postData = await Post.update(req.body, {
             where: {
                 id: req.params.id,
             },

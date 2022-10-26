@@ -12,7 +12,7 @@
     <header>
         <a href="/">Home</a>
         {{#if loggedIn}}
-        <a href="/">Dashboard</a>
+        <a href="/dashboard">Dashboard</a>
         {{else}}
         <a href="/login">Dashboard</a>
         {{/if}}
@@ -20,6 +20,8 @@
     </header>
     <main>
         {{{body}}}
+
+        <a href="/dashboard/newPost" class="create-post">Create a Post</a>
     </main>
 
     <script src="/js/logout.js"></script>
