@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 
 //Get comment
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const newComment = await Comment.findAll({include: [User],});
 

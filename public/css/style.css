@@ -23,10 +23,11 @@ body{
 .post-description{
     text-align: center;
     background-color: rgb(163, 120, 85);
+    font-size: 3vh;
 }
 .post-content{
     background-color: rgb(163, 120, 85);
-    width: 50%;
+    /* width: 50%; */
     margin-bottom: 3vh;
 }
 
@@ -40,7 +41,7 @@ body{
 
 .comment-content{
     text-align: center;
-    width: 50%;
+    /* width: 50%; */
     background-color: brown;
     color: antiquewhite;
 }
@@ -53,4 +54,9 @@ body{
 #create-post{
     text-align: center;
     font-size: 3vh;
+}
+
+.login-to-comment{
+    font-size: 3vh;
+    background-color: aliceblue;
 }

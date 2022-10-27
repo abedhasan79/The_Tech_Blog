@@ -3,7 +3,7 @@ const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-router.get('/', async (req, res) => {
+router.get('/',withAuth, async (req, res) => {
     try {
         // Get all posts and JOIN with user data
         const PostData = await Post.findAll({
