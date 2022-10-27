@@ -1,6 +1,6 @@
 <!-- Loop over each object in the posts array -->
 {{#each posts as |post| }}
-<div class="justify-content-center post-content">
+<div class=" post-content">
     <div class="post-title">
         <h2>
             <a href="/post/{{post.id}}">
@@ -10,7 +10,7 @@
         
         <p>Created by {{user.name}} on {{format_date post.date_created}}</p>
     </div>
-    <div class="post-description">
+    <div class="post-description d-flex justify-content-center">
         <p>
             {{post.description}}
         </p>
