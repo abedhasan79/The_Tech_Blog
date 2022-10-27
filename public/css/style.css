@@ -14,6 +14,9 @@ header{
 
 body{
     background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .post-title{
@@ -41,14 +44,14 @@ body{
     margin-left: 5vh;
     margin-right: 5vh;
 }
-@media screen and (max-width:561px) {
+/* @media screen and (max-width:561px) {
     
     body{
         
         width: max-content;
     }
     
-}
+} */
 
 /* @media screen and (max-width:283px) {
     
